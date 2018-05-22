@@ -16,7 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import project.dajver.com.galleryview.R;
 
-public class ImageThumbsRecyclerView extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class ImageThumbsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     private List<View> selectedViews = new ArrayList<>();
     private List<View> allViews = new ArrayList<>();
@@ -24,7 +24,7 @@ public class ImageThumbsRecyclerView extends RecyclerView.Adapter<RecyclerView.V
     private OnItemClickListener onItemClickListener;
     private Context context;
 
-    public ImageThumbsRecyclerView(Context context, List<String> productImagesModels) {
+    public ImageThumbsRecyclerAdapter(Context context, List<String> productImagesModels) {
         this.context = context;
         this.productImagesModels = productImagesModels;
     }

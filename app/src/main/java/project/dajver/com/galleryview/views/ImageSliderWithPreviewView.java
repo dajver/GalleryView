@@ -14,9 +14,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import project.dajver.com.galleryview.R;
 import project.dajver.com.galleryview.adapters.ImageSliderPagerAdapter;
-import project.dajver.com.galleryview.adapters.ImageThumbsRecyclerView;
+import project.dajver.com.galleryview.adapters.ImageThumbsRecyclerAdapter;
 
-public class ImageSliderWithPreviewView extends LinearLayout implements ImageThumbsRecyclerView.OnItemClickListener,
+public class ImageSliderWithPreviewView extends LinearLayout implements ImageThumbsRecyclerAdapter.OnItemClickListener,
         ViewPager.OnPageChangeListener {
 
     @BindView(R.id.pager)
@@ -25,7 +25,7 @@ public class ImageSliderWithPreviewView extends LinearLayout implements ImageThu
     RecyclerView imageThumbsRecyclerView;
 
     private Context context;
-    private ImageThumbsRecyclerView thumbsRecyclerView;
+    private ImageThumbsRecyclerAdapter thumbsRecyclerView;
 
     public ImageSliderWithPreviewView(Context context) {
         super(context);
@@ -52,7 +52,7 @@ public class ImageSliderWithPreviewView extends LinearLayout implements ImageThu
         if(imageList != null && imageList.size() > 0) {
             viewPager.setAdapter(new ImageSliderPagerAdapter(context, imageList));
             viewPager.addOnPageChangeListener(this);
-            thumbsRecyclerView = new ImageThumbsRecyclerView(context, imageList);
+            thumbsRecyclerView = new ImageThumbsRecyclerAdapter(context, imageList);
             thumbsRecyclerView.setOnItemClickListener(this);
             imageThumbsRecyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
             imageThumbsRecyclerView.setAdapter(thumbsRecyclerView);
