@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         List<String> productImagesModels = new ArrayList<>();
-        productImagesModels.add("https://www.citrus.ua/upload/new_iblock/a2f/b38b8ade3a3dbfb045ab02a7110be07a.jpg");
-        productImagesModels.add("https://www.citrus.ua/upload/new_iblock/6c3/7b3abffc318145a9731db67b3830aa20.jpg");
-        productImagesModels.add("https://www.citrus.ua/upload/new_iblock/60c/4a0aa2dcd84fa2ffdd0a9a58d22dc433.jpg");
-        productImagesModels.add("https://www.citrus.ua/upload/new_iblock/f6e/c6e5cd64de916e72a0c92cd5bfe0b517.jpg");
-        productImagesModels.add("https://www.citrus.ua/upload/new_iblock/e98/51fc06668435357af9423ba7170943f9.jpg");
-        productImagesModels.add("https://www.citrus.ua/upload/new_iblock/f8a/920c8b495024bbc917022856f8786428.jpg");
+        productImagesModels.add("https://github.com/dajver/GalleryView/blob/master/imgs/image1.jpg?raw=true");
+        productImagesModels.add("https://github.com/dajver/GalleryView/blob/master/imgs/image2.jpg?raw=true");
+        productImagesModels.add("https://github.com/dajver/GalleryView/blob/master/imgs/image3.jpg?raw=true");
+        productImagesModels.add("https://github.com/dajver/GalleryView/blob/master/imgs/image4.jpg?raw=true");
+        productImagesModels.add("https://github.com/dajver/GalleryView/blob/master/imgs/image5.jpg?raw=true");
+        productImagesModels.add("https://github.com/dajver/GalleryView/blob/master/imgs/image6.jpg?raw=true");
 
         imageSliderWithPreviewView.setImageList(productImagesModels);
     }
